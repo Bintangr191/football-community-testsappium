@@ -1,0 +1,41 @@
+{
+  "name": "kickoff-appium-tests",
+  "version": "1.0.0",
+  "description": "UI Automation tests untuk aplikasi Kick Off (React Native Expo) menggunakan Appium 2 + WebdriverIO",
+  "private": true,
+  "scripts": {
+    "test": "wdio run wdio.conf.js",
+    "test:auth": "wdio run wdio.conf.js --spec tests/auth/*.test.js",
+    "test:login": "wdio run wdio.conf.js --spec tests/auth/login.test.js",
+    "test:register": "wdio run wdio.conf.js --spec tests/auth/register.test.js",
+    "test:home": "wdio run wdio.conf.js --spec tests/home/home.test.js",
+    "test:forum": "wdio run wdio.conf.js --spec tests/forum/forum.test.js",
+    "test:profile": "wdio run wdio.conf.js --spec tests/profile/*.test.js",
+    "test:report": "wdio run wdio.conf.js --spec tests/report/*.test.js",
+    "appium:start": "appium --port 4723 --log-level info --log appium.log",
+    "appium:doctor": "appium-doctor --android",
+    "driver:install": "appium driver install uiautomator2",
+    "driver:list": "appium driver list",
+    "setup": "npm install && npm run driver:install"
+  },
+  "dependencies": {
+    "mysql2": "^3.22.5"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^9.15.0",
+    "@wdio/local-runner": "^9.15.0",
+    "@wdio/mocha-framework": "^9.15.0",
+    "@wdio/spec-reporter": "^9.15.0",
+    "appium": "^2.17.1",
+    "appium-uiautomator2-driver": "^3.9.7",
+    "axios": "^1.7.9",
+    "chai": "^4.4.1",
+    "dotenv": "^16.4.7",
+    "fs-extra": "^11.3.0",
+    "webdriverio": "^9.15.0",
+    "winston": "^3.17.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

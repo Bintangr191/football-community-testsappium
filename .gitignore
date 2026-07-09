@@ -1,0 +1,26 @@
+# --- Environment ---
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# --- Dependencies ---
+node_modules/
+package-lock.json
+
+# --- Test Output (auto-generated) ---
+screenshots/
+recordings/
+logs/
+appium.log
+*.log
+
+# --- WebdriverIO ---
+.wdio-results/
+wdio-*.log
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
